@@ -1,8 +1,8 @@
 # Progress Bar JS
 
-[![npm version](https://img.shields.io/npm/v/loading-request.svg?style=flat-square)](https://www.npmjs.com/package/loading-request)
-[![GitHub Repo](https://img.shields.io/badge/repository-GitHub-blue?style=flat-square&logo=github)](https://github.com/urian121/loading-request)
-[![npm](https://img.shields.io/npm/dt/loading-request.svg)](https://www.npmjs.com/package/loading-request)
+[![npm version](https://img.shields.io/npm/v/progress-bar-js.svg?style=flat-square)](https://www.npmjs.com/package/progress-bar-js)
+[![GitHub Repo](https://img.shields.io/badge/repository-GitHub-blue?style=flat-square&logo=github)](https://github.com/urian121/progress-bar-js)
+[![npm](https://img.shields.io/npm/dt/progress-bar-js.svg)](https://www.npmjs.com/package/progress-bar-js)
 
 Progress Bar JS es un paquete versátil, que te permite mostrar una barra de progreso elegante y altamente personalizable para tus aplicaciones web. Añade un toque de profesionalismo y dinamismo a tu sitio con una implementación sencilla y opciones de personalización flexibles. Ideal para cualquier proyecto que necesite mostrar el progreso de una forma atractiva y eficaz.
 
@@ -12,21 +12,21 @@ Progress Bar JS es un paquete versátil, que te permite mostrar una barra de pro
 
 ## Instalación
 
-    $ npm install loading-request --save
-    $ yarn add loading-request
+    $ npm install progress-bar-js --save
+    $ yarn add progress-bar-js
 
 ## Caracteristicas
 
-- Fácil de usar: Implementa indicadores de carga fácilmente en tu aplicación web con solo unas pocas líneas de código.
-- Compatible con múltiples frameworks: Funciona sin problemas con frameworks populares como React, Vue, Angular, y Svelte.
-- Personalización flexible: Permite personalizar el color del spinner y del texto del mensaje de carga según las necesidades del usuario.
-- Integración rápida: Instalación simple a través de npm o yarn, listo para usar en minutos.
-- Funcionalidad asincrónica: Soporta operaciones asíncronas como carga de datos, envío de formularios, y navegación entre páginas.
-- Animaciones suaves: Utiliza animaciones CSS para proporcionar una experiencia de usuario fluida.
-- Ligero y eficiente: Diseñado para tener un impacto mínimo en el rendimiento de la aplicación.
-- Documentación clara y detallada: Incluye ejemplos prácticos y documentación completa para facilitar la implementación y configuración.
-- Actualizaciones regulares: Mantenido activamente con mejoras y actualizaciones periódicas.
-- Licencia abierta: Publicado bajo licencia ISC, permitiendo su uso en proyectos comerciales y personales sin restricciones.
+- Fácil implementación: Agrega indicadores de progreso con solo unas líneas de código.
+- Compatible con varios frameworks: Funciona sin problemas en React, Vue, Angular, y Svelte.
+- Personalización flexible: Ajusta colores del spinner y texto de carga según tus necesidades.
+- Instalación rápida: Se integra fácilmente via npm o yarn en minutos.
+- Soporte para operaciones asíncronas: Ideal para carga de datos y navegación entre páginas.
+- Animaciones suaves: Mejora la experiencia de usuario con animaciones CSS.
+- Eficiencia y rendimiento: Diseñado para impactar mínimamente el rendimiento de la aplicación.
+- Documentación completa: Incluye ejemplos prácticos y guías detalladas.
+- Mantenimiento activo: Actualizaciones frecuentes y mejoras continuas.
+- Licencia abierta: Publicado bajo licencia ISC, apto para uso comercial y personal.
 
 ## Ejemplo Práctico en React.js
 
@@ -39,7 +39,7 @@ function App() {
     ProgressBarJSContainer([]);
   };
 
-  return <button onClick={cargarBarra}>Barra</button>;
+  return <button onClick={cargarBarra}>Mostrar Barra</button>;
 }
 
 export default App;
@@ -100,46 +100,24 @@ export default function ApiSimpson() {
 
 ## API
 
-#### showLoading(opciones?: ShowLoadingOptions)
+#### ProgressBarJSContainer(options: string[]);
 
-Es una función que permite mostrar un indicador de carga con opciones personalizables.
-
-- **Opciones**:
-  - message: Mensaje que se muestra junto al indicador de carga. Por defecto es "Cargando...".
-  - spinnerColor: Color opcional del borde del spinner. Si se proporciona, se aplica dinámicamente.
-  - textLoadingColor: Color opcional del texto del mensaje de carga. Si se proporciona, se aplica dinámicamente.
-
-Recibe un objeto de configuración opcional. Si no se proporciona ningún argumento, se utilizará un objeto vacío como valor por defecto.
-
-**Ejemplo de uso**:
-
-```jsx
-showLoading({
-  message: "Cargando...",
-  spinnerColor: "#f3752b",
-  textLoadingColor: "#EE5E09",
-});
-```
-
-#### hideLoading(opciones?: HideLoadingOptions)
-
-Es una función que permite ocultar el indicador de carga después de un período de tiempo especificado.
+Esta función crea y muestra una barra de progreso con opciones personalizables. Por defecto, la barra de progreso se muestra en la parte superior de la página y se oculta automáticamente cuando se completa la carga.
 
 - **Parámetros**:
-  - opciones: Un objeto opcional que puede contener:
-    - timeLoading: Tiempo en milisegundos antes de ocultar el indicador. Por defecto es 500ms.
 
-Si se llama sin argumentos, se utilizará un objeto vacío como valor por defecto.
+  - options:
+    - Recibe un array opcional de strings que contiene los colores para personalizar la barra de progreso y su fondo. El primer valor del array corresponde al backgroundColor y el segundo al barColor. Por ejemplo: ['#f11946', '#0572ce'].
 
-**Ejemplo de uso**:
+- **Opciones**:
+  - backgroundColor: Color de fondo de la barra de progreso. Por defecto, es semitransparente con un opacidad de 0.2. Si se proporciona, se aplica dinámicamente.
+  - barColor: Color de la barra de progreso. Por defecto es #0572ce. Si se proporciona, se aplica dinámicamente.
 
-```jsx
-hideLoading({ timeLoading: 1500 });
-```
+Esta función es útil para implementar indicadores de carga visualmente atractivos y personalizables en aplicaciones web.
 
 ### Contribuir
 
-Si encuentras algún problema o tienes una idea para mejorar el paquete, por favor abre un issue o envía un pull request en GitHub: https://github.com/urian121/loading-request
+Si encuentras algún problema o tienes una idea para mejorar el paquete, por favor abre un issue o envía un pull request en GitHub: https://github.com/urian121/progress-bar-js
 
 ## Desarrollado por
 
@@ -161,4 +139,4 @@ Licensed under MIT
 
 ## Agradecimientos
 
-¡Gracias a todos los Devs 👨‍💻 que han utilizado y contribuido al desarrollo de **Loading Request**! Su apoyo y retroalimentación son fundamentales para mejorar continuamente este paquete.
+¡Gracias a todos los Devs 👨‍💻 que han utilizado y contribuido al desarrollo de **Progress Bar JS**! Su apoyo y retroalimentación son fundamentales para mejorar continuamente este paquete.
