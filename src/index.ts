@@ -7,9 +7,9 @@ interface ProgressLoaderOptions {
 
 const ProgressLoaderContainer = (options: string[]): HTMLDivElement => {
   // Remover cualquier barra de progreso existente
-  const existingProgressBar = document.querySelector(".progress-bar-js");
-  if (existingProgressBar) {
-    existingProgressBar.remove();
+  const existingProgressLoader = document.querySelector(".progress-loader-js");
+  if (existingProgressLoader) {
+    existingProgressLoader.remove();
   }
 
   // Convertir el array de strings a un objeto ProgressBarOptions
@@ -18,29 +18,29 @@ const ProgressLoaderContainer = (options: string[]): HTMLDivElement => {
     barColor: options[1],
   };
 
-  const progressBarJS = document.createElement("div");
-  progressBarJS.className = "progress-bar-js";
+  const progressLoader = document.createElement("div");
+  progressLoader.className = "progress-loader-js";
 
   if (optionsObject.backgroundColor) {
-    progressBarJS.style.backgroundColor = optionsObject.backgroundColor;
+    progressLoader.style.backgroundColor = optionsObject.backgroundColor;
   }
 
-  const progressBarValue = document.createElement("div");
-  progressBarValue.className = "progress-bar-value";
+  const progressLoaderValue = document.createElement("div");
+  progressLoaderValue.className = "progress-loader-value";
 
   if (optionsObject.barColor) {
-    progressBarValue.style.backgroundColor = optionsObject.barColor;
+    progressLoaderValue.style.backgroundColor = optionsObject.barColor;
   }
 
-  progressBarJS.appendChild(progressBarValue);
-  document.body.appendChild(progressBarJS);
+  progressLoader.appendChild(progressLoaderValue);
+  document.body.appendChild(progressLoader);
 
   // Remover la barra de progreso después de que termine la animación
-  progressBarValue.addEventListener("animationend", () => {
-    progressBarJS.remove(); // Remover el elemento completo de la barra de progreso
+  progressLoaderValue.addEventListener("animationend", () => {
+    progressLoader.remove(); // Remover el elemento completo de la barra de progreso
   });
 
-  return progressBarJS;
+  return progressLoader;
 };
 
 export { ProgressLoaderContainer };
