@@ -1,32 +1,47 @@
-.progress-loader-js {
+.content-progress-loader {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-
+  z-index: 10000;
+  margin: 0;
+  background-color: #ccc;
   height: 4px;
-  background-color: #0572ce;
-  opacity: 0.2;
   width: 100%;
-  overflow: hidden;
 }
 
-.progress-loader-value {
-  width: 100%;
+.progress-loader {
+  width: 0%;
   height: 100%;
-  background-color: #0572ce;
-  animation: indeterminateAnimation 1s linear;
-  transform-origin: 0% 50%;
+  background: #c00;
+  animation: expand 2s ease-in-out forwards;
 }
 
-@keyframes indeterminateAnimation {
-  0% {
-    transform: translateX(0) scaleX(0);
+@-moz-keyframes expand {
+  to {
+    width: 100%;
   }
-  40% {
-    transform: translateX(0) scaleX(0.4);
+}
+
+@-webkit-keyframes expand {
+  to {
+    width: 100%;
   }
-  100% {
-    transform: translateX(100%) scaleX(0.5);
+}
+
+@-ms-keyframes expand {
+  to {
+    width: 100%;
   }
+}
+
+@keyframes expand {
+  to {
+    width: 100%;
+  }
+}
+.hidden-content-progress-loader {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s ease-in-out;
 }

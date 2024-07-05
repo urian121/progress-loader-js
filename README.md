@@ -109,10 +109,16 @@ Esta función crea y muestra una barra de progreso con opciones personalizables.
   - Recibe un array opcional de strings que contiene los colores para personalizar la barra de progreso y su fondo. El primer valor del array corresponde al backgroundColor y el segundo al barColor. Por ejemplo: ['#f11946', '#0572ce'].
 
 - **Opciones**:
-  - backgroundColor: Color de fondo de la barra de progreso. Por defecto, es semitransparente con un opacidad de 0.2. Si se proporciona, se aplica dinámicamente.
+  - backgroundColor: Color de fondo de la barra de progreso. Por defecto, es semitransparente con un opacidad de 0.8. Si se proporciona, se aplica dinámicamente.
   - barColor: Color de la barra de progreso. Por defecto es #0572ce. Si se proporciona, se aplica dinámicamente.
 
 Esta función es útil para implementar indicadores de carga visualmente atractivos y personalizables en aplicaciones web.
+
+Como se menciono antes, ProgressLoaderContainer se recibe de forma opcionar una array de colores para personalizar la barra de progreso y su fondo. Pr defecto la barra posee como color backgroundColor: #b4daf y barColor: #0572c.
+
+```jsx
+ProgressLoaderContainer(["#b4daf", "#0572c"]);
+```
 
 ### Contribuir
 
