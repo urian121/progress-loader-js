@@ -1,8 +1,8 @@
 {
-  "name": "progress-bar-js",
+  "name": "progress-loader-js",
   "version": "1.0.0",
-  "main": "dist/progress-bar-js.umd.js",
-  "module": "dist/progress-bar-js.es.js",
+  "main": "dist/progress-loader-js.umd.js",
+  "module": "dist/progress-loader-js.es.js",
   "scripts": {
     "build": "vite build"
   },
@@ -18,6 +18,7 @@
     "progress",
     "web development",
     "bar",
+    "progress-loader-js",
     "loading",
     "loading spinner",
     "indicador",
@@ -27,7 +28,7 @@
   ],
   "author": "Urian Viera",
   "license": "ISC",
-  "description": "Progress Bar JS es un paquete versátil, que te permite mostrar una barra de progreso elegante y altamente personalizable para tus aplicaciones web. Añade un toque de profesionalismo y dinamismo a tu sitio con una implementación sencilla y opciones de personalización flexibles. Ideal para cualquier proyecto que necesite mostrar el progreso de una forma atractiva y eficaz.",
+  "description": "Progress Loader JS es un paquete versátil, que te permite mostrar una barra de progreso elegante y altamente personalizable para tus aplicaciones web. Añade un toque de profesionalismo y dinamismo a tu sitio con una implementación sencilla y opciones de personalización flexibles. Ideal para cualquier proyecto que necesite mostrar el progreso de una forma atractiva y eficaz.",
   "devDependencies": {
     "vite": "^5.3.3"
   },

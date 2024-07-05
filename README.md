@@ -1,10 +1,10 @@
-# Progress Bar JS
+# Progress Loader JS
 
-[![npm version](https://img.shields.io/npm/v/progress-bar-js.svg?style=flat-square)](https://www.npmjs.com/package/progress-bar-js)
-[![GitHub Repo](https://img.shields.io/badge/repository-GitHub-blue?style=flat-square&logo=github)](https://github.com/urian121/progress-bar-js)
-[![npm](https://img.shields.io/npm/dt/progress-bar-js.svg)](https://www.npmjs.com/package/progress-bar-js)
+[![npm version](https://img.shields.io/npm/v/progress-loader-js.svg?style=flat-square)](https://www.npmjs.com/package/progress-loader-js)
+[![GitHub Repo](https://img.shields.io/badge/repository-GitHub-blue?style=flat-square&logo=github)](https://github.com/urian121/progress-loader-js)
+[![npm](https://img.shields.io/npm/dt/progress-loader-js.svg)](https://www.npmjs.com/package/progress-loader-js)
 
-Progress Bar JS es un paquete versátil, que te permite mostrar una barra de progreso elegante y altamente personalizable para tus aplicaciones web. Añade un toque de profesionalismo y dinamismo a tu sitio con una implementación sencilla y opciones de personalización flexibles. Ideal para cualquier proyecto que necesite mostrar el progreso de una forma atractiva y eficaz.
+Progress Loader JS es un paquete versátil, que te permite mostrar una barra de progreso elegante y altamente personalizable para tus aplicaciones web. Añade un toque de profesionalismo y dinamismo a tu sitio con una implementación sencilla y opciones de personalización flexibles. Ideal para cualquier proyecto que necesite mostrar el progreso de una forma atractiva y eficaz.
 
 ## Resultado Final
 
@@ -12,13 +12,13 @@ Progress Bar JS es un paquete versátil, que te permite mostrar una barra de pro
 
 ## Instalación
 
-    $ npm install progress-bar-js --save
-    $ yarn add progress-bar-js
+    $ npm install progress-loader-js --save
+    $ yarn add progress-loader-js
 
 ## Caracteristicas
 
 - Fácil implementación: Agrega indicadores de progreso con solo unas líneas de código.
-- Compatible con varios frameworks: Funciona sin problemas en React, Vue, Angular, y Svelte.
+- Compatible con varios frameworks: Funciona sin problemas en React, Vue, Angular, Next, Svelte y más.
 - Personalización flexible: Ajusta colores del spinner y texto de carga según tus necesidades.
 - Instalación rápida: Se integra fácilmente via npm o yarn en minutos.
 - Soporte para operaciones asíncronas: Ideal para carga de datos y navegación entre páginas.
@@ -31,12 +31,12 @@ Progress Bar JS es un paquete versátil, que te permite mostrar una barra de pro
 ## Ejemplo Práctico en React.js
 
 ```jsx
-import { ProgressBarJSContainer } from "progress-bar-js";
-import "progress-bar-js/dist/style.css";
+import { ProgressLoaderContainer } from "progress-loader-js";
+import "progress-loader-js/dist/style.css";
 
 function App() {
   const cargarBarra = () => {
-    ProgressBarJSContainer([]);
+    ProgressLoaderContainer([]);
   };
 
   return <button onClick={cargarBarra}>Mostrar Barra</button>;
@@ -100,7 +100,7 @@ export default function ApiSimpson() {
 
 ## API
 
-#### ProgressBarJSContainer(options: string[]);
+#### ProgressLoaderContainer(options: string[]);
 
 Esta función crea y muestra una barra de progreso con opciones personalizables. Por defecto, la barra de progreso se muestra en la parte superior de la página y se oculta automáticamente cuando se completa la carga.
 
@@ -116,7 +116,7 @@ Esta función es útil para implementar indicadores de carga visualmente atracti
 
 ### Contribuir
 
-Si encuentras algún problema o tienes una idea para mejorar el paquete, por favor abre un issue o envía un pull request en GitHub: https://github.com/urian121/progress-bar-js
+Si encuentras algún problema o tienes una idea para mejorar el paquete, por favor abre un issue o envía un pull request en GitHub: https://github.com/urian121/progress-loader-js
 
 ## Desarrollado por
 
@@ -134,8 +134,8 @@ Si encuentras algún problema o tienes una idea para mejorar el paquete, por fav
 
 Licensed under MIT
 
-[![GitHub](https://img.shields.io/badge/GitHub-urian121/loading--request-181717?logo=github&style=flat-square)](https://github.com/urian121/loading-request)
+[![GitHub](https://img.shields.io/badge/GitHub-urian121progress-loader-js-181717?logo=github&style=flat-square)](https://github.com/urian121/progress-loader-js)
 
 ## Agradecimientos
 
-¡Gracias a todos los Devs 👨‍💻 que han utilizado y contribuido al desarrollo de **Progress Bar JS**! Su apoyo y retroalimentación son fundamentales para mejorar continuamente este paquete.
+¡Gracias a todos los Devs 👨‍💻 que han utilizado y contribuido al desarrollo de **Progress Loader JS**! Su apoyo y retroalimentación son fundamentales para mejorar continuamente este paquete.

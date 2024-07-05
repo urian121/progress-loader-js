@@ -1,11 +1,11 @@
-import "./progressBarJS.css";
+import "./progressLoader.css";
 
-interface ProgressBarOptions {
+interface ProgressLoaderOptions {
   backgroundColor?: string; // Color para el fondo de .progress-bar-js
   barColor?: string; // Color para la barra de progreso de .progress-bar-value
 }
 
-const ProgressBarJSContainer = (options: string[]): HTMLDivElement => {
+const ProgressLoaderContainer = (options: string[]): HTMLDivElement => {
   // Remover cualquier barra de progreso existente
   const existingProgressBar = document.querySelector(".progress-bar-js");
   if (existingProgressBar) {
@@ -13,7 +13,7 @@ const ProgressBarJSContainer = (options: string[]): HTMLDivElement => {
   }
 
   // Convertir el array de strings a un objeto ProgressBarOptions
-  const optionsObject: ProgressBarOptions = {
+  const optionsObject: ProgressLoaderOptions = {
     backgroundColor: options[0],
     barColor: options[1],
   };
@@ -43,4 +43,4 @@ const ProgressBarJSContainer = (options: string[]): HTMLDivElement => {
   return progressBarJS;
 };
 
-export { ProgressBarJSContainer };
+export { ProgressLoaderContainer };
