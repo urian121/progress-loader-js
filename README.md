@@ -1,10 +1,10 @@
-# Progress Bar
+# Progress Bar JS
 
 [![npm version](https://img.shields.io/npm/v/loading-request.svg?style=flat-square)](https://www.npmjs.com/package/loading-request)
 [![GitHub Repo](https://img.shields.io/badge/repository-GitHub-blue?style=flat-square&logo=github)](https://github.com/urian121/loading-request)
 [![npm](https://img.shields.io/npm/dt/loading-request.svg)](https://www.npmjs.com/package/loading-request)
 
-Loading Request es un paquete npm versátil que muestra indicadores de carga en aplicaciones web. Compatible con frameworks como React, Vue, Angular, Svelte, Next.js, Astro y más, mejora la experiencia del usuario con spinners, barras de progreso y otros indicadores visuales durante solicitudes y procesos asincrónicos en JavaScript. Personalizable y fácil de integrar, Loading Request simplifica la implementación de indicadores de carga en aplicaciones web, mejorando la usabilidad y la percepción de rendimiento.
+Progress Bar JS es un paquete versátil, que te permite mostrar una barra de progreso elegante y altamente personalizable para tus aplicaciones web. Añade un toque de profesionalismo y dinamismo a tu sitio con una implementación sencilla y opciones de personalización flexibles. Ideal para cualquier proyecto que necesite mostrar el progreso de una forma atractiva y eficaz.
 
 ## Resultado Final
 
@@ -31,22 +31,16 @@ Loading Request es un paquete npm versátil que muestra indicadores de carga en 
 ## Ejemplo Práctico en React.js
 
 ```jsx
-import { showLoading, hideLoading } from "loading-request";
-import "loading-request/dist/index.css";
+import { ProgressBarJSContainer } from "progress-bar-js";
+import "progress-bar-js/dist/style.css";
 
-const App = () => {
-  const handleShowLoading = () => {
-    showLoading({
-      message: "Cargando...",
-      spinnerColor: "#f3752b",
-      textLoadingColor: "#EE5E09",
-    });
-
-    hideLoading({ timeLoading: 1500 });
+function App() {
+  const cargarBarra = () => {
+    ProgressBarJSContainer([]);
   };
 
-  return <button onClick={handleShowLoading}>Mostrar Loading</button>;
-};
+  return <button onClick={cargarBarra}>Barra</button>;
+}
 
 export default App;
 ```
