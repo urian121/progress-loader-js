@@ -6,7 +6,20 @@
     "build": "parcel build src/index.js --dist-dir dist --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "next",
+    "nextjs",
+    "react",
+    "nprogress",
+    "progress bar app",
+    "progress bar",
+    "progress bar js",
+    "loader",
+    "progress",
+    "bar",
+    "loading",
+    "indicador"
+  ],
   "author": "Urian Viera",
   "license": "ISC",
   "description": "Progress Bar JS es un paquete versátil, que te permite mostrar una barra de progreso elegante y altamente personalizable para tus aplicaciones web. Añade un toque de profesionalismo y dinamismo a tu sitio con una implementación sencilla y opciones de personalización flexibles. Ideal para cualquier proyecto que necesite mostrar el progreso de una forma atractiva y eficaz.",

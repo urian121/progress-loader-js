@@ -1,8 +1,8 @@
 import "./loading.css";
 
-export function createProgressBarJs(options = {}) {
-  const progressBar = document.createElement("div");
-  progressBar.className = "progress-bar";
+export function createProgressBarJS(options = {}) {
+  const progressBarJS = document.createElement("div");
+  progressBarJS.className = "progress-bar";
 
   const progressBarValue = document.createElement("div");
   progressBarValue.className = "progress-bar-value";
@@ -10,7 +10,7 @@ export function createProgressBarJs(options = {}) {
   if (options.color) {
     progressBarValue.style.backgroundColor = options.color;
   }
-
+  /*
   if (options.height) {
     progressBar.style.height = options.height;
   }
@@ -18,9 +18,10 @@ export function createProgressBarJs(options = {}) {
   if (options.width) {
     progressBar.style.width = options.width;
   }
+  */
 
-  progressBar.appendChild(progressBarValue);
-  document.body.appendChild(progressBar);
+  progressBarJS.appendChild(progressBarValue);
+  document.body.appendChild(progressBarJS);
 
   // Añadir la animación solo una vez
   progressBarValue.style.animation = "indeterminateAnimation 1s linear";
@@ -28,5 +29,5 @@ export function createProgressBarJs(options = {}) {
     progressBarValue.style.animation = "";
   });
 
-  return progressBar;
+  return progressBarJS;
 }
