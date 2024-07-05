@@ -106,8 +106,7 @@ Esta función crea y muestra una barra de progreso con opciones personalizables.
 
 - **Parámetros**:
 
-  - options:
-    - Recibe un array opcional de strings que contiene los colores para personalizar la barra de progreso y su fondo. El primer valor del array corresponde al backgroundColor y el segundo al barColor. Por ejemplo: ['#f11946', '#0572ce'].
+  - Recibe un array opcional de strings que contiene los colores para personalizar la barra de progreso y su fondo. El primer valor del array corresponde al backgroundColor y el segundo al barColor. Por ejemplo: ['#f11946', '#0572ce'].
 
 - **Opciones**:
   - backgroundColor: Color de fondo de la barra de progreso. Por defecto, es semitransparente con un opacidad de 0.2. Si se proporciona, se aplica dinámicamente.
