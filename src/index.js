@@ -1,6 +1,6 @@
 import "./loading.css";
 
-export function createProgressBarJS(options = {}) {
+const createProgressBarJS = (options = {}) => {
   const progressBarJS = document.createElement("div");
   progressBarJS.className = "progress-bar";
 
@@ -10,15 +10,6 @@ export function createProgressBarJS(options = {}) {
   if (options.color) {
     progressBarValue.style.backgroundColor = options.color;
   }
-  /*
-  if (options.height) {
-    progressBar.style.height = options.height;
-  }
-
-  if (options.width) {
-    progressBar.style.width = options.width;
-  }
-  */
 
   progressBarJS.appendChild(progressBarValue);
   document.body.appendChild(progressBarJS);
@@ -30,4 +21,6 @@ export function createProgressBarJS(options = {}) {
   });
 
   return progressBarJS;
-}
+};
+
+export { createProgressBarJS };

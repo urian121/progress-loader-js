@@ -1,10 +1,10 @@
 {
   "name": "progress-bar-js",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "dist/progress-bar-js.umd.js",
+  "module": "dist/progress-bar-js.es.js",
   "scripts": {
-    "build": "parcel build src/index.js --dist-dir dist --public-url ./",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build"
   },
   "keywords": [
     "next",
@@ -23,8 +23,8 @@
   "author": "Urian Viera",
   "license": "ISC",
   "description": "Progress Bar JS es un paquete versátil, que te permite mostrar una barra de progreso elegante y altamente personalizable para tus aplicaciones web. Añade un toque de profesionalismo y dinamismo a tu sitio con una implementación sencilla y opciones de personalización flexibles. Ideal para cualquier proyecto que necesite mostrar el progreso de una forma atractiva y eficaz.",
-  "devDependencies": {
-    "parcel": "^2.12.0"
+    "devDependencies": {
+    "vite": "^5.3.3"
   },
   "files": [
     "dist"
