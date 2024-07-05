@@ -1,9 +1,5 @@
 import "./progressLoader.css";
-
-interface ProgressLoaderOptions {
-  backgroundColor?: string; // Color para el fondo de .progress-loader
-  barColor?: string; // Color para la barra de progreso de .progress-loader
-}
+import { ProgressLoaderOptions } from "../interfaces/index";
 
 const ProgressLoaderContainer = (options: string[]): HTMLDivElement => {
   // Remover cualquier barra de progreso existente
@@ -18,19 +14,20 @@ const ProgressLoaderContainer = (options: string[]): HTMLDivElement => {
     barColor: options[1],
   };
 
-  console.log(optionsObject.backgroundColor);
-  console.log(optionsObject.barColor);
-
+  // Crear y configurar el contenedor principal de la barra de progreso
   const contentProgressLoader = document.createElement("div");
   contentProgressLoader.className = "content-progress-loader";
 
+  // Aplicar color de fondo si está definido en las opciones
   if (optionsObject.backgroundColor) {
     contentProgressLoader.style.backgroundColor = optionsObject.backgroundColor;
   }
 
+  // Crear y configurar la barra de progreso
   const progressLoader = document.createElement("div");
   progressLoader.className = "progress-loader";
 
+  // Aplicar color de la barra si está definido en las opciones
   if (optionsObject.barColor) {
     progressLoader.style.backgroundColor = optionsObject.barColor;
   }
@@ -38,7 +35,7 @@ const ProgressLoaderContainer = (options: string[]): HTMLDivElement => {
   contentProgressLoader.appendChild(progressLoader);
   document.body.appendChild(contentProgressLoader);
 
-  // Añadir clase de finalización después de completar la animación
+  // Agregar la barra de progreso al contenedor principal y luego al cuerpo del documento
   progressLoader.addEventListener("animationend", () => {
     contentProgressLoader.classList.add("hidden-content-progress-loader");
     setTimeout(() => {
