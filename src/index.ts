@@ -10,7 +10,6 @@ import { ProgressLoaderOptions } from "../interfaces/index";
  * @returns El contenedor HTML creado que contiene la barra de progreso.
  */
 
-// Definir opciones predeterminadas como constantes
 const defaultOptions: ProgressLoaderOptions = {
   backgroundColor: "#ccc",
   barColor: "#f11946",
@@ -19,7 +18,6 @@ const defaultOptions: ProgressLoaderOptions = {
 const ProgressLoaderContainer = (
   options: [string, string] = [defaultOptions.backgroundColor || "", defaultOptions.barColor || ""]
 ): HTMLDivElement => {
-  //const ProgressLoaderContainer = (options: ProgressLoaderOptions = string[]): HTMLDivElement => {
   // Remover cualquier barra de progreso existente
   const existingProgressLoader = document.querySelector(".content-progress-loader");
   if (existingProgressLoader) {
