@@ -1,7 +1,25 @@
 import "./progressLoader.css";
 import { ProgressLoaderOptions } from "../interfaces/index";
 
-const ProgressLoaderContainer = (options: string[]): HTMLDivElement => {
+/**
+ * Crea y muestra una barra de progreso con opciones personalizables.
+ *
+ * @param options Opciones para personalizar la barra de progreso.
+ *                - `backgroundColor`: Color de fondo opcional para el contenedor de la barra de progreso.
+ *                - `barColor`: Color opcional para la barra de progreso misma.
+ * @returns El contenedor HTML creado que contiene la barra de progreso.
+ */
+
+// Definir opciones predeterminadas como constantes
+const defaultOptions: ProgressLoaderOptions = {
+  backgroundColor: "#ccc",
+  barColor: "#f11946",
+};
+
+const ProgressLoaderContainer = (
+  options: [string, string] = [defaultOptions.backgroundColor || "", defaultOptions.barColor || ""]
+): HTMLDivElement => {
+  //const ProgressLoaderContainer = (options: ProgressLoaderOptions = string[]): HTMLDivElement => {
   // Remover cualquier barra de progreso existente
   const existingProgressLoader = document.querySelector(".content-progress-loader");
   if (existingProgressLoader) {
@@ -40,7 +58,7 @@ const ProgressLoaderContainer = (options: string[]): HTMLDivElement => {
     contentProgressLoader.classList.add("hidden-content-progress-loader");
     setTimeout(() => {
       contentProgressLoader.remove(); // Remover el elemento completo de la barra de progreso después de la transición
-    }, 2000); // Esperar 2 segundos (2000 ms) antes de eliminar el elemento
+    }, 1000);
   });
 
   return contentProgressLoader;

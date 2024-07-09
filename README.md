@@ -34,13 +34,18 @@ Progress Loader JS es un paquete versátil, que te permite mostrar una barra de 
 import { ProgressLoaderContainer } from "progress-loader-js";
 import "progress-loader-js/dist/style.css";
 
-function App() {
-  const cargarBarra = () => {
-    ProgressLoaderContainer([]);
+const App = () => {
+  // Función para mostrar la barra de progreso
+  const mostrarBarraDeProgreso = () => {
+    ProgressLoaderContainer(["#f0f0f0", "#3498db"]); // Ejemplo de colores como opciones
   };
 
-  return <button onClick={cargarBarra}>Mostrar Barra</button>;
-}
+  return (
+    <div>
+      <button onClick={mostrarBarraDeProgreso}>Mostrar Barra de Progreso</button>
+    </div>
+  );
+};
 
 export default App;
 ```
@@ -53,10 +58,11 @@ import { useState } from "react";
 import { getSimpson } from "../actions/getSimpson";
 import Image from "next/image";
 
-import { showLoading, hideLoading } from "loading-request";
-import "loading-request/dist/index.css";
+import { ProgressLoaderContainer } from "progress-loader-js";
+import "progress-loader-js/dist/style.css";
 
 export default function ApiSimpson() {
+  ProgressLoaderContainer(["#f0f0f0", "#3498db"]);
   const [data, setData] = useState(null);
 
   const handleGetSimpson = async () => {
@@ -66,8 +72,6 @@ export default function ApiSimpson() {
       setData(data);
     } catch (error) {
       console.error("Error al obtener los datos:", error);
-    } finally {
-      hideLoading();
     }
   };
 
