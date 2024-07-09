@@ -1,6 +1,6 @@
 {
   "name": "progress-loader-js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "dist/progress-loader-js.umd.js",
   "module": "dist/progress-loader-js.es.js",
   "scripts": {
