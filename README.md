@@ -6,7 +6,7 @@
 
 Progress Loader JS es un paquete versátil, que te permite mostrar una barra de progreso elegante y altamente personalizable para tus aplicaciones web. Añade un toque de profesionalismo y dinamismo a tu sitio con una implementación sencilla y opciones de personalización flexibles. Ideal para cualquier proyecto que necesite mostrar el progreso de una forma atractiva y eficaz.
 
-## Resultado Final
+## Casos de uso:
 
 ![demo](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/demo-progress-loader-js.gif)
 
@@ -70,6 +70,8 @@ export default function Contacto() {
   );
 }
 ```
+
+👉 [Código](https://github.com/urian121/app-nextjs-con-progress-loader-js)
 
 ## API
 
