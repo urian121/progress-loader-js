@@ -52,57 +52,24 @@ function App() {
 export default App;
 ```
 
-## Ejemplo Práctico en Next.js
+## Ejemplo Práctico en Next.js, navegación entre paginas
+
+![demo](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/navegacion-entre-paginas-con-progress-loader-js.gif)
 
 ```jsx
 "use client";
-import { useState } from "react";
-import { getSimpson } from "../actions/getSimpson";
-import Image from "next/image";
-
 import { ProgressLoaderContainer } from "progress-loader-js";
 import "progress-loader-js/dist/style.css";
 
-export default function ApiSimpson() {
-  ProgressLoaderContainer(["#f0f0f0", "#3498db"]);
-  const [data, setData] = useState(null);
-
-  const handleGetSimpson = async () => {
-    showLoading({ message: "Cargando API..." });
-    try {
-      const data = await getSimpson();
-      setData(data);
-    } catch (error) {
-      console.error("Error al obtener los datos:", error);
-    }
-  };
-
+export default function Contacto() {
+  ProgressLoaderContainer(["", "#535bf2"]);
   return (
-    <>
-      <button className="my-4" onClick={handleGetSimpson}>
-        Obtener personajes
-      </button>
-
-      {data && (
-        <div className="cards">
-          {data.map((personaje, index) => (
-            <div key={index} className="card">
-              <div>{personaje.character}</div>
-              <Image width={200} height={200} src={personaje.image} alt={personaje.character} />
-            </div>
-          ))}
-        </div>
-      )}
-    </>
+    <div>
+      <h1>Página de Contacto 😯</h1>
+    </div>
   );
 }
 ```
-
-## Resultado en Next.js consumiendo una API REST
-
-![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/loading-request-con-nextjs.gif)
-
-👉 [Código](https://github.com/urian121/loading-request-con-nextjs)
 
 ## API
 
