@@ -8,7 +8,9 @@ Progress Loader JS es un paquete versátil, que te permite mostrar una barra de 
 
 ## Resultado Final
 
-![demo](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/Loading-Request-formulario.gif)
+![demo](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/demo-progress-loader-js.gif)
+
+![demo](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/progress-loader-js.gif)
 
 ## Instalación
 
@@ -34,18 +36,18 @@ Progress Loader JS es un paquete versátil, que te permite mostrar una barra de 
 import { ProgressLoaderContainer } from "progress-loader-js";
 import "progress-loader-js/dist/style.css";
 
-const App = () => {
-  // Función para mostrar la barra de progreso
-  const mostrarBarraDeProgreso = () => {
-    ProgressLoaderContainer(["#f0f0f0", "#3498db"]); // Ejemplo de colores como opciones
+function App() {
+  const ActivarBarra = () => {
+    ProgressLoaderContainer(["", "#1fb141"]);
   };
 
   return (
-    <div>
-      <button onClick={mostrarBarraDeProgreso}>Mostrar Barra de Progreso</button>
-    </div>
+    <>
+      <h1>Progress Loader JS</h1>
+      <button onClick={ActivarBarra}>Activar Barra</button>
+    </>
   );
-};
+}
 
 export default App;
 ```
