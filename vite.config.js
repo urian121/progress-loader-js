@@ -1,22 +1,22 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+import dts from "vite-plugin-dts";
 
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"), // Asegúrate de que esto apunte a tu archivo de entrada
+      entry: "src/index.ts",
       name: "ProgressLoaderJS",
-      fileName: (format) => `progress-loader-js.${format}.js`,
+      fileName: "index",
     },
     rollupOptions: {
-      // Asegúrate de que las dependencias externas estén correctamente configuradas
-      external: ["react", "vue"],
       output: {
-        globals: {
-          react: "React",
-          vue: "Vue",
-        },
+        format: "esm",
       },
     },
   },
+  plugins: [
+    dts({
+      outputDir: "dist", // Especificar el directorio de salida para los archivos .d.ts
+    }),
+  ],
 });

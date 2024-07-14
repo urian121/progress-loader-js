@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "description": "Progress Loader JS es un paquete versátil, que te permite mostrar una barra de progreso elegante y altamente personalizable para tus aplicaciones web. Añade un toque de profesionalismo y dinamismo a tu sitio con una implementación sencilla y opciones de personalización flexibles. Ideal para cualquier proyecto que necesite mostrar el progreso de una forma atractiva y eficaz.",
   "type": "module",
-  "main": "dist/progress-loader-js.umd.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "dist/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/urian121/progress-loader-js"
+    "url": "https://github.com/urian121/progress-loader-js"
   },
   "keywords": [
     "next",
@@ -36,15 +36,16 @@
   "author": "Urian Viera",
   "license": "ISC",
   "bugs": {
-    "url": "<https://github.com/urian121/progress-loader-js/issues>"
+    "url": "https://github.com/urian121/progress-loader-js/issues"
   },
-    "files": [
+  "files": [
     "LICENSE",
     "README.md",
     "dist"
   ],
   "homepage": "https://github.com/urian121/progress-loader-js#README",
   "devDependencies": {
-    "vite": "^5.3.3"
+    "vite": "^5.3.3",
+    "vite-plugin-dts": "^3.9.1"
   }
 }
