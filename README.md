@@ -4,7 +4,7 @@
 [![GitHub Repo](https://img.shields.io/badge/repository-GitHub-blue?style=flat-square&logo=github)](https://github.com/urian121/progress-loader-js)
 [![npm](https://img.shields.io/npm/dt/progress-loader-js.svg)](https://www.npmjs.com/package/progress-loader-js)
 
-Progress Loader JS es un paquete versátil, que te permite mostrar una barra de progreso elegante y altamente personalizable para tus aplicaciones web. Añade un toque de profesionalismo y dinamismo a tu sitio con una implementación sencilla y opciones de personalización flexibles. Ideal para cualquier proyecto que necesite mostrar el progreso de una forma atractiva y eficaz.
+**Progress Loader** JS es un paquete versátil que permite mostrar una barra de progreso elegante y altamente personalizable en tus aplicaciones web. Con una implementación sencilla y opciones de personalización flexibles, añade un toque de profesionalismo y dinamismo a tu sitio. Ideal para cualquier proyecto que necesite mostrar el progreso de manera atractiva y eficaz.
 
 ## Casos de uso:
 
@@ -30,7 +30,7 @@ Progress Loader JS es un paquete versátil, que te permite mostrar una barra de 
 - Mantenimiento activo: Actualizaciones frecuentes y mejoras continuas.
 - Licencia abierta: Publicado bajo licencia ISC, apto para uso comercial y personal.
 
-## Ejemplo Práctico en React.js
+## Ejemplo Práctico utilizando React.js
 
 ```jsx
 import { ProgressLoaderContainer } from "progress-loader-js";
@@ -38,7 +38,10 @@ import "progress-loader-js/dist/style.css";
 
 function App() {
   const ActivarBarra = () => {
-    ProgressLoaderContainer(["", "#1fb141"]);
+    ProgressLoaderContainer({
+      backgroundColor: "#ccc",
+      barColor: "#1fb141",
+    });
   };
 
   return (
@@ -52,7 +55,7 @@ function App() {
 export default App;
 ```
 
-## Ejemplo Práctico en Next.js, navegación entre paginas
+## Ejemplo Práctico utilizando Next.js, navegación entre paginas
 
 ![demo](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/navegacion-entre-paginas-con-progress-loader-js.gif)
 
@@ -62,7 +65,10 @@ import { ProgressLoaderContainer } from "progress-loader-js";
 import "progress-loader-js/dist/style.css";
 
 export default function Contacto() {
-  ProgressLoaderContainer(["", "#535bf2"]);
+  ProgressLoaderContainer({
+    backgroundColor: "#ccc",
+    barColor: "#1fb141",
+  });
   return (
     <div>
       <h1>Página de Contacto 😯</h1>
@@ -75,25 +81,23 @@ export default function Contacto() {
 
 ## API
 
-#### ProgressLoaderContainer(options: string[]);
+#### ProgressLoaderContainer(options: ProgressLoaderOptions);
 
 Esta función crea y muestra una barra de progreso con opciones personalizables. Por defecto, la barra de progreso se muestra en la parte superior de la página y se oculta automáticamente cuando se completa la carga.
 
 - **Parámetros**:
 
-  - Recibe un array opcional de strings que contiene los colores para personalizar la barra de progreso y su fondo. El primer valor del array corresponde al backgroundColor y el segundo al barColor. Por ejemplo: ['#f11946', '#0572ce'].
+  - Recibe un objeto opcional de tipo ProgressLoaderOptions que contiene las opciones para personalizar la barra de progreso y su fondo. El objeto puede incluir las siguientes propiedades:
+    - **backgroundColor**: Color de fondo de la barra de progreso. Por defecto es **#ccc**. Si se proporciona, se aplica dinámicamente.
+    - **barColor**: Color de la barra de progreso. Por defecto es **#f11946**. Si se proporciona, se aplica dinámicamente.
 
-- **Opciones**:
-  - backgroundColor: Color de fondo de la barra de progreso. Por defecto, es semitransparente con un opacidad de 0.8. Si se proporciona, se aplica dinámicamente.
-  - barColor: Color de la barra de progreso. Por defecto es #0572ce. Si se proporciona, se aplica dinámicamente.
+- **Opciones**
+  - **backgroundColor**: Color de fondo de la barra de progreso.
+  - **barColor**: Color de la barra de progreso.
 
 Esta función es útil para implementar indicadores de carga visualmente atractivos y personalizables en aplicaciones web.
 
-Como se menciono antes, ProgressLoaderContainer se recibe de forma opcionar una array de colores para personalizar la barra de progreso y su fondo. Pr defecto la barra posee como color backgroundColor: #b4daf y barColor: #0572c.
-
-```jsx
-ProgressLoaderContainer(["#b4daf", "#0572c"]);
-```
+Como se mencionó antes, ProgressLoaderContainer recibe de forma opcional un objeto con los colores para personalizar la barra de progreso y su fondo. Por defecto, la barra posee como color backgroundColor: #ccc y barColor: **#f11946**.
 
 ### Contribuir
 
@@ -113,10 +117,10 @@ Si encuentras algún problema o tienes una idea para mejorar el paquete, por fav
 
 ## License
 
-Licensed under MIT
+Licensed under ISC
 
 [![GitHub](https://img.shields.io/badge/GitHub-urian121progress-loader-js-181717?logo=github&style=flat-square)](https://github.com/urian121/progress-loader-js)
 
 ## Agradecimientos
 
-¡Gracias a todos los Devs 👨‍💻 que han utilizado y contribuido al desarrollo de **Progress Loader JS**! Su apoyo y retroalimentación son fundamentales para mejorar continuamente este paquete.
+¡Gracias a todos los **Devs** 👨‍💻 que han utilizado y contribuido al desarrollo de **Progress Loader JS**! Su apoyo y retroalimentación son fundamentales para mejorar continuamente este paquete.
