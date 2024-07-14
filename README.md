@@ -17,19 +17,6 @@
     $ npm install progress-loader-js --save
     $ yarn add progress-loader-js
 
-## Caracteristicas
-
-- Fácil implementación: Agrega indicadores de progreso con solo unas líneas de código.
-- Compatible con varios frameworks: Funciona sin problemas en React, Vue, Angular, Next, Svelte y más.
-- Personalización flexible: Ajusta colores del spinner y texto de carga según tus necesidades.
-- Instalación rápida: Se integra fácilmente via npm o yarn en minutos.
-- Soporte para operaciones asíncronas: Ideal para carga de datos y navegación entre páginas.
-- Animaciones suaves: Mejora la experiencia de usuario con animaciones CSS.
-- Eficiencia y rendimiento: Diseñado para impactar mínimamente el rendimiento de la aplicación.
-- Documentación completa: Incluye ejemplos prácticos y guías detalladas.
-- Mantenimiento activo: Actualizaciones frecuentes y mejoras continuas.
-- Licencia abierta: Publicado bajo licencia ISC, apto para uso comercial y personal.
-
 ## Ejemplo Práctico utilizando React.js
 
 ```jsx
@@ -79,6 +66,54 @@ export default function Contacto() {
 
 👉 [Ver Código en GitHub](https://github.com/urian121/app-nextjs-con-progress-loader-js)
 
+## Uso a través de CDN
+
+También puedes incluir `progress-loader-js` directamente en tu proyecto utilizando un enlace CDN. Sigue estos pasos:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Loader JS</title>
+    <!-- Incluir el CSS de loading-request desde CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/progress-loader-js/dist/style.css" />
+  </head>
+  <body>
+    <button id="btnLoading">Mostrar Loading</button>
+
+    <script type="module">
+      import { ProgressLoaderContainer } from "https://unpkg.com/progress-loader-js/dist/index.js";
+
+      // Función para mostrar el loading
+      function handleShowLoading() {
+        ProgressLoaderContainer({
+          backgroundColor: "lightblue",
+          barColor: "green",
+        });
+      }
+
+      // Asociar la función al botón
+      document.querySelector("#btnLoading").addEventListener("click", handleShowLoading);
+    </script>
+  </body>
+</html>
+```
+
+## Caracteristicas
+
+- Fácil implementación: Agrega indicadores de progreso con solo unas líneas de código.
+- Compatible con varios frameworks: Funciona sin problemas en React, Vue, Angular, Next, Svelte y más.
+- Personalización flexible: Ajusta colores del spinner y texto de carga según tus necesidades.
+- Instalación rápida: Se integra fácilmente via npm o yarn en minutos.
+- Soporte para operaciones asíncronas: Ideal para carga de datos y navegación entre páginas.
+- Animaciones suaves: Mejora la experiencia de usuario con animaciones CSS.
+- Eficiencia y rendimiento: Diseñado para impactar mínimamente el rendimiento de la aplicación.
+- Documentación completa: Incluye ejemplos prácticos y guías detalladas.
+- Mantenimiento activo: Actualizaciones frecuentes y mejoras continuas.
+- Licencia abierta: Publicado bajo licencia ISC, apto para uso comercial y personal.
+
 ## API
 
 #### ProgressLoaderContainer(options: ProgressLoaderOptions);
@@ -121,6 +156,4 @@ Licensed under ISC
 
 [![GitHub](https://img.shields.io/badge/GitHub-urian121progress-loader-js-181717?logo=github&style=flat-square)](https://github.com/urian121/progress-loader-js)
 
-## Agradecimientos
-
-¡Gracias a todos los **Devs** 👨‍💻 que han utilizado y contribuido al desarrollo de **Progress Loader JS**! Su apoyo y retroalimentación son fundamentales para mejorar continuamente este paquete.
+## Agradecimientos ¡Gracias a todos los **Devs** 👨‍💻 que han utilizado y contribuido al desarrollo de **Progress Loader JS**! Su apoyo y retroalimentación son fundamentales para mejorar continuamente este paquete.
