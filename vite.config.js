@@ -6,17 +6,19 @@ export default defineConfig({
     lib: {
       entry: "src/index.ts",
       name: "ProgressLoaderJS",
+      formats: ["es"],
       fileName: "index",
     },
     rollupOptions: {
       output: {
-        format: "esm",
+        format: "es",
+        entryFileNames: "index.js",
       },
     },
   },
   plugins: [
     dts({
-      outputDir: "dist", // Especificar el directorio de salida para los archivos .d.ts
+      outputDir: "dist",
     }),
   ],
 });
