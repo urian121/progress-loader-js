@@ -57,7 +57,7 @@ export default App;
 
 ## Ejemplo Práctico utilizando Next.js, navegación entre paginas
 
-![demo](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/navegacion-entre-paginas-con-progress-loader-js.gif)
+![Ver Código en GitHub](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/navegacion-entre-paginas-con-progress-loader-js.gif)
 
 ```jsx
 "use client";
@@ -77,7 +77,7 @@ export default function Contacto() {
 }
 ```
 
-👉 [Código](https://github.com/urian121/app-nextjs-con-progress-loader-js)
+👉 [Ver Código en GitHub](https://github.com/urian121/app-nextjs-con-progress-loader-js)
 
 ## API
 
